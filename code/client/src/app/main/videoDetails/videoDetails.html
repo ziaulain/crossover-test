@@ -1,0 +1,78 @@
+<div class="fluid-container">
+  <!-- Navbar -->
+  <div><acme-navbar creation-date="vm.creationDate"></acme-navbar></div>
+  <!-- Navbar End -->
+
+  <!-- Top header image -->
+  <div class="jumbotron text-center">
+    <p>Our mission is to give everyone a voice and to show them the world</p>
+  </div>
+  <!-- Top header image End -->
+
+  <!-- Page Content -->
+  <div class="container videoDetails">
+    <div class="row">
+      <!--  Main Video Container End -->
+      <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12" ng-if="vm.video">
+        <!-- Video Container -->
+        <div class="video-container">
+          <!-- Html5 Video -->
+          <video id="{{'video'}}" video-player width="100%" controls>
+            <source ng-src="{{vm.video.url}}" type="video/mp4">
+            <source ng-src="{{vm.video.url}}" type="video/ogg">
+            Your browser does not support HTML5 video.
+          </video>
+          <!-- Video Name -->
+          <div class="video-header">{{vm.video.name}}</div>
+          <!-- Video Rating -->
+          <rating class="rating" rate="vm.video.ratings" video-id="vm.video._id"></rating>
+          <!-- Video Description -->
+          <div class="video-desc">
+            {{vm.video.description}}
+          </div>
+        </div>
+        <!-- Video Container End -->
+      </div>
+      <!-- Main Video Container End -->
+
+      <!-- Recommended Videos -->
+      <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
+        <!-- Recommended Heading -->
+        <div class="col-xs-12">
+          <b>Recommended</b>
+        </div>
+        <!-- Recommended Heading End -->
+
+        <!-- Recommended Videos -->
+        <div class="col-xs-12" ng-repeat="video in vm.videos">
+          <!-- Video Container -->
+          <div class="col-xs-12 reduce-padding multi-video-container">
+            <!-- Video -->
+            <div class="col-xs-6 reduce-padding">
+              <video id="{{'video'+$index}}" video-player width="100%" height="150px" controls>
+                <source ng-src="{{'http://localhost:3000/'+video.url}}" type="video/mp4">
+                <source ng-src="{{'http://localhost:3000/'+video.url}}" type="video/ogg">
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <!-- Video End -->
+
+            <!-- Video Details -->
+            <div class="col-xs-6">
+              <div class="multi-video-header" ui-sref="videoDetails({videoId: video._id})">{{video.name}}</div>
+              <rating rate="video.ratings" video-id="video._id"></rating>
+              <div class="multi-video-desc">
+                {{video.description}}
+              </div>
+            </div>
+            <!-- Video Details End -->
+          </div>
+          <!-- Video Container End -->
+        </div>
+        <!-- Recommended Videos End -->
+      </div>
+      <!--  Recommended Videos End -->
+    </div>
+  </div>
+  <!-- Page Content End -->
+</div>

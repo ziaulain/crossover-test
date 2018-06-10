@@ -1,0 +1,81 @@
+.navigation {
+
+  background-color: $white;
+  height: 50px;
+
+  .acme-navbar-text {
+    color: $white;
+  }
+
+  .header-bg {
+    background-color: $white;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .navbar-brand {
+    padding: 15px 10px 15px 30px;
+  }
+
+  a {
+    color: $black;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    margin: 0;
+  }
+
+  .setting {
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+  }
+
+  .my-account {
+    cursor: pointer;
+    height: 50px !important;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+  }
+
+  .setting-dropdown {
+    min-width: 150px;
+  }
+
+  .active {
+    background-color: $gray;
+  }
+
+  li.dropdown {
+    display: inline-block;
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      width: 100%;
+      z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    cursor: pointer;
+    padding: 12px 26px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-top: 1px solid #ddd;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+}

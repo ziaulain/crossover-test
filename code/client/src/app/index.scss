@@ -1,0 +1,42 @@
+
+@import '../assets/styles/_var';
+@import '../assets/styles/_mixin';
+@import '../assets/styles/_core';
+@import '../../bower_components/angular-material/angular-material';
+@import '../../bower_components/font-awesome/scss/font-awesome';
+@import '../../bower_components/compass-sass-mixins/lib/compass';
+@import '../../bower_components/angular-rangeslider/scss/rangeSlider';
+@import '../../bower_components/spinkit/scss/spinners/1-rotating-plane';
+@import '../../bower_components/spinkit/scss/spinners/3-wave';
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

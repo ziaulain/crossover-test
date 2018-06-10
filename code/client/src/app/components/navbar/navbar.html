@@ -1,0 +1,29 @@
+<div class="navigation">
+  <nav class="header-bg">
+    <div class="navbar-header">
+      <!-- Header Logo -->
+      <a class="navbar-brand" ui-sref="home">
+        <span>Crossover Video Portal</span>
+      </a>
+      <!-- Header Logo End -->
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn my-account">My Account</a>
+          <!-- Dropdown list links -->
+          <div class="dropdown-content">
+            <a ng-click="vm.logout()"><i class="fa fa-sign-out"></i> &nbsp;Sign Out</a>
+          </div>
+          <!-- Dropdown list links End -->
+        </li>
+      </ul>
+      <!-- Home link -->
+      <ul class="nav navbar-nav navbar-right">
+        <li ui-sref-active="active"><a ui-sref="home"><i class="fa fa-home"></i> Home</a></li>
+      </ul>
+      <!-- Home link End -->
+    </div>
+  </nav>
+
+</div>

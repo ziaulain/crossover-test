@@ -1,0 +1,161 @@
+.login {
+
+  h3 {
+    color: $white;
+  }
+
+  .white-bg {
+    background-color: $white;
+  }
+
+  .btn-padding-btm {
+    margin-bottom: 10px;
+  }
+
+  .signin-text {
+    color: $dark-gray;
+    font-size: 30px;
+  }
+
+  .btn-spinner {
+    height: 40px;
+    left: -10px;
+    margin: 0;
+    margin-left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+  }
+
+  .signin-btn-processing {
+    background-image: none !important;
+  }
+
+  .incorrect-pass {
+    margin-top: -24px;
+    text-align: left;
+  }
+
+  .signin-btn {
+    background-color: $blue;
+    background-image: url('../assets/images/signin_icon.png');
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    border: 0;
+    border-radius: 25px;
+    color: $white;
+    height: 40px;
+    padding: 10px;
+
+    &:focus {
+      border-radius: 25px;
+      outline: none;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $dark-blue;
+      border-radius: 25px;
+    }
+
+    path {
+      stroke: rgb(255,255,255);
+    }
+
+  }
+
+  .primary-btn {
+    background-color: $blue;
+    background-size: 20px;
+    border: 0;
+    color: $white;
+    height: 40px;
+    padding: 10px;
+
+    &:focus {
+      outline: none;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $dark-blue;
+    }
+
+    path {
+      stroke: rgb(255,255,255);
+    }
+
+  }
+
+  .md-progress-circular {
+    stroke: $white !important;
+  }
+
+  .new-user {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  .slider-container {
+    background-image: url('../assets/images/login_side_image.png');
+    background-size: cover;
+    height: 100vh;
+    padding: 40vh 50px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .login-container {
+    background-color: $white;
+    height: 100vh;
+    padding-top: 20vh;
+    text-align: center;
+
+  }
+
+  .input-area {
+    margin: auto;
+    max-width: 300px;
+  }
+
+  .remember-me {
+    float: left;
+  }
+
+  .forgot-pass {
+    float: right;
+  }
+
+  .remember-container {
+    margin-bottom: 5px;
+  }
+
+  .md-no-momentum {
+    background-color: $white;
+  }
+  @media only screen and (min-width: $xs) and (max-width: $sm) {
+    .slider-container {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: $sm) and (max-width: $md) {
+    .slider-container {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: $md) and (max-width: $lg) {
+    .slider-container {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: $lg) {
+
+  }
+}

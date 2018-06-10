@@ -1,0 +1,39 @@
+.home {
+
+  video {
+    background: #000;
+  }
+
+  .video-container {
+    height: 260px;
+    background: #fff;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    max-width: 270px;
+  }
+
+  .video-header {
+    cursor: pointer;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 1.8em;
+    line-height: 1.8em;
+    padding: 0 10px;
+
+    &:hover {
+      color: #666;
+    }
+  }
+
+  .video-desc {
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 2.8em;
+    padding: 0 10px;
+  }
+
+}

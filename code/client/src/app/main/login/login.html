@@ -1,0 +1,69 @@
+<div class="container-fluid login">
+  <div class="row white-bg">
+    <!-- Left Side Image -->
+    <div class="col-xs-5 slider-container">
+      <h3>Without data you are just another person with an opinion</h3>
+    </div>
+    <!-- Left Side Image End -->
+
+    <div class="col-md-7 col-xs-12 login-container">
+      <!-- Sign In Heading -->
+      <div class="signin-text">Sign In</div>
+      <!-- Sign In Heading End -->
+
+      <!-- Login Form -->
+      <form name="login" class="input-area" autocomplete="off" novalidate>
+        <md-content class="md-no-momentum text-left">
+          <!-- Username Input -->
+          <md-input-container class="md-icon-float md-block">
+            <label>Username</label>
+            <input name="username" ng-model="vm.credentials.username" type="text" required autocomplete="off">
+            <md-icon md-svg-src='./assets/images/person_icon.svg'></md-icon>
+            <div ng-messages="login.username.$error" multiple="" md-auto-hide="false">
+              <div ng-message="required">
+                Username is required.
+              </div>
+            </div>
+          </md-input-container>
+          <!-- Username Input End -->
+
+          <!-- Password Input -->
+          <md-input-container ng-hide="vm.forgotPassBool" md-no-float="" class="md-block" ng-class="{'md-input-has-value': vm.credentials.password!==undefined}">
+            <label>Password</label>
+            <input name="pass" ng-model="vm.credentials.password" type="password" required autocomplete="off"/>
+            <md-icon md-svg-src='./assets/images/pass-lock.svg'></md-icon>
+            <div ng-messages="login.pass.$error" multiple="" md-auto-hide="false">
+              <div ng-message="required">
+                Password is required.
+              </div>
+            </div>
+          </md-input-container>
+          <!-- Password Input End -->
+        </md-content>
+
+        <div class="col-xs-12 reduce-padding">
+          <!-- Error message -->
+          <div class="col-xs-12 reduce-padding error incorrect-pass">
+            {{vm.errorMsg}}
+          </div>
+          <!-- Error message End -->
+
+          <!-- Sign In Button -->
+          <button ng-disabled="login.username.$invalid || login.pass.$invalid"  class="col-xs-12 signin-btn" ng-class="{'signin-btn-processing': vm.processing}" ng-click="vm.login()">
+            <span ng-show="!vm.processing">Sign In</span>
+
+            <md-progress-circular ng-hide="!vm.processing"
+                                  ng-disabled="!vm.processing"
+                                  class="md-hue-2 btn-spinner"
+                                  md-diameter="20px">
+            </md-progress-circular>
+          </button>
+          <!-- Sign In Button End -->
+        </div>
+        
+      </form>
+      <!-- Login Form End -->
+    </div>
+  </div>
+
+</div>

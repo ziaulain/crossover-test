@@ -1,0 +1,14 @@
+.rating {
+
+  padding: 0 10px;
+
+  .rate-btn {
+    &:hover {
+      color: $star;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+}
